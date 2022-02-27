@@ -1,0 +1,17 @@
+Algoritmo Exe01
+
+Var
+	nome : Vetor[1..20, 0..64] de caractere
+	i : inteiro
+Início
+
+	para i de 1 até 20 faça
+		Escreval("Digite o nome ", i, ":")
+		Leia(nome[i])
+	Fim_para
+
+	para i de 1 até 20 faça
+		Escreva(nome[i,1])
+	Fim_para
+Fim
+

@@ -1,0 +1,30 @@
+Algoritmo areaDeCobertura
+Var
+	N, i: inteiro
+	R, area, menor: real
+Const
+	PI = 3.1415
+
+Início
+	Escreval("Informe qual a quantidade de áreas a serem calculadas:")
+	Leia (N)
+	
+	Escreval("Informe o raio do círculo de cobertura (em metros):")
+	Leia (R)
+	area <- PI * (R * R)
+	menor <- area
+	
+	Para i de 2 até N passo 1 faça
+		
+		Escreval("Informe o raio do círculo de cobertura (em metros):")
+		Leia (R)
+		area <- PI * (R * R)
+		
+		Se(area < menor) então
+			menor <- area
+		Fim_se
+	
+	Fim_para
+
+	Escreva("O valor da menor área é: ", menor, "metros quadrados.")
+Fim

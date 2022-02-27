@@ -1,0 +1,34 @@
+Algoritmo Exe5
+
+var
+	km, combustivel: real
+	tipo: caractere
+
+Início 
+
+	Escreva("Informe qual foi o seu percurso em km: ")
+	Leia(km)
+
+	Escreva("Qual o seu tipo de moto (A, B ou C)? ")
+	Leia(tipo)
+
+	Se (tipo = "A") então
+		combustivel <- km / 26
+
+	Senão
+		Se (tipo = "B") então
+			combustivel <- km / 20
+
+		Senão
+			Se (tipo = "C") então
+				combustivel <- km / 7
+
+			Fim_se
+
+		Fim_se
+
+	Fim_se
+
+	Escreva("O consumo estimado de combustível foi de ", combustivel, "L")
+
+Fim

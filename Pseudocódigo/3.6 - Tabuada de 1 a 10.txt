@@ -1,0 +1,13 @@
+Algoritmo Tabuada
+Var 
+	i, i2 : inteiro
+Início
+
+	Para i de 1 até 10 passo 1 faça
+		Escreva("Tabuada do ", i)
+		Para i2 de 1 até 10 passo 1 faça
+			Escreva(i, " x ", i2, " = ", i * i2)
+		Fim_para
+	Fim_para
+Fim
+

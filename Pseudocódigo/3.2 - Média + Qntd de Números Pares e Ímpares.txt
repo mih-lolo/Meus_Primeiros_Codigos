@@ -1,0 +1,41 @@
+Algoritmo Exe2
+Var 
+	num, qntd, pares, impares : inteiro
+	media : real
+Início
+	
+	Leia(num)
+	
+	qntd <- 0
+	pares <- 0
+	impares <- 0
+	media <- 0
+
+	Enquanto(num <> 0) faça
+		
+		qntd <- qntd + 1
+		
+		Se((num MOD 2 =) 0) então
+			pares <- pares + 1
+		Senão 
+			impares <- impares + 1
+		Fim_se
+		
+		media <- media + num
+
+		Leia(num)
+
+	Fim_enquanto
+
+	media <- media / qntd
+
+	Escreval("Numero de valores lidos: ", qntd)
+	Escreval("Media Aritmetica: ", media)
+	Escreval("Quantidade de números pares: ", pares)
+	Escreval("Quantidade de números ímpares: ", impares)
+
+Fim
+
+
+		
+		

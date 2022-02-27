@@ -1,0 +1,41 @@
+Algoritmo Exe06
+
+Tipo
+	Cad_produto = registro
+	nome : Vetor[1..30] de caractere
+	preco_compra : real
+	preco_venda : real
+
+Fim_registro
+
+Var
+	produtos : Vetor[1..30] de Cad_produto
+	i, maior, menor : inteiro
+Início
+
+	maior <- 0
+	menor <- 0
+
+	para i de 1 até 30 faça
+		Escreval("Informe o nome do produto:")
+		Leia(produtos[i].nome)
+		Escreval("Informe o seu preço de compra:")
+		Leia(produtos[i].preco_compra)
+		Escreval("Informe o seu preço de venda:")
+		Leia(produtos[i].preco_venda)
+
+	
+		Se(produtos[i].preco_venda - produtos[i].preco_compra) / produtos[i].preco_compra > 0.3) então 
+			maior <- maior + 1
+		Senão
+			Se(produtos[i].preco_venda - produtos[i].preco_compra) / produtos[i].preco_compra < 0.15) então
+				menor <- menor + 1
+			Fim_se
+		Fim_se
+	Fim_para
+
+	Escreva("Quantidade de mercadorias que apresentam um lucro maior que 30%: ", maior)
+	Escreva("Quantidade de mercadorias que apresentam um lucro menor que 15%: ", menor)
+	
+Fim
+	

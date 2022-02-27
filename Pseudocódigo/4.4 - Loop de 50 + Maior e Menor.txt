@@ -1,0 +1,30 @@
+Algoritmo Exe04
+Var
+	num : Vetor[1..50] de inteiro
+	i, maior, menor : inteiro
+	primeiro : lógico
+
+Início
+	primeiro <- verdadeiro
+
+	para i de 1 até 50 faça
+		Escreval("Digite um número inteiro:")
+		Leia(num[i])
+
+		Se (primeiro = verdadeiro) então
+			maior <- num[i]
+			menor <- num[i]
+			primeiro <- falso
+		Fim_se
+
+		Se (num[i] > maior) então
+			maior <- num[i]
+		Senão
+			Se(num[i] < menor) então
+				menor <- num[i]
+		Fim_se
+	fim_para
+
+	Escreva("O maior número informado é ", maior, " e o menor número é ", menor)
+
+Fim

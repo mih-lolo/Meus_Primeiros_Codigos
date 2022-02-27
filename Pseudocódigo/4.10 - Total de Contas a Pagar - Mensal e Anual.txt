@@ -1,0 +1,37 @@
+Algoritmo Exe10
+Var
+	contas : Vetor[1..12, 1..4] de real
+	i, j : inteiro
+	total : Vetor[1..12] de real
+	total_anual : real
+Início
+
+	total_anual <- 0
+
+	para i de 1 até 12 faça
+
+		total[i] <- 0
+
+		para j de 1 até 4 faça
+			Escreval("Digite o valor da conta da semana ", j, " do mês ", i, ":")
+			Leia(contas[i, j])
+
+			total[i] <- total[i] + contas[i, j]
+
+		Fim-para
+
+	total_anual <- total_anual + total[i]
+
+	Fim-para
+
+	Escreva("O valor total de contas a pagar por mês é:")
+	
+	Para i de 1 até 12 faça
+
+		Escreval("Total a pagar no mês ", i, "é: ", total[i])
+
+	Fim_para
+
+	Escreva("O total de contas a pagar no ano é:", total_anual)
+
+Fim

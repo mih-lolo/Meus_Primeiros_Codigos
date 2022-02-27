@@ -1,0 +1,37 @@
+Algoritmo Qntd
+Var 
+	i, qntd : inteiro
+	num, maior, menor : real
+	primeiro : logico
+
+Início
+
+	Escreval("Quantos números você deseja digitar?")
+	Leia(qntd)
+
+	primeiro <- verdadeiro
+
+	Para i de 1 até qntd passo 1 faça
+		
+		Leia(num)
+
+		Se(primeiro = verdadeiro) então
+			maior <- num
+			menor <- num
+			primeiro <- falso
+		Fim_se
+
+		Se(num > maior) então
+			maior <- num
+		Fim_se
+
+		Se(num < menor) então
+			menor <- num
+		Fim_se
+
+	Fim_para
+
+	Escreva("O maior número é: ", maior)
+	Escreva("E o menor número é ", menor)
+
+Fim

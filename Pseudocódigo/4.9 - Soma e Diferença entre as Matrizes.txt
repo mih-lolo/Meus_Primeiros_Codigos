@@ -1,0 +1,41 @@
+Algoritmo Exe09
+Var
+	A, B, S, D : Vetor[1..5, 1..5] de inteiro
+	i, j : inteiro
+Início
+	Para i de 1 até 5 faça
+		Para j de 1 até 5 faça
+			Escreval("Informe o valor da posição [", i, ",", j, "] da matriz A:")
+			Leia(A[i, j]
+		Fim_para
+	Fim_para
+
+	Para i de 1 até 5 faça
+		Para j de 1 até 5 faça
+			Escreval("Informe o valor da posição [", i, ",", j, "] da matriz B:")
+			Leia(B[i, j]
+			
+			S[i, j] <- A[i, j] + B[i, j]
+			D[i, j] <- A[i, j] - B[i, j]
+
+		Fim_para
+	Fim_para
+
+	Escreval("O valor da matriz soma é:")
+
+	Para i de 1 até 5 faça
+		Para j de 1 até 5 faça
+			Escreva(S[i, j], " ")
+		Fim_para
+		Escreval()
+	Fim_para
+
+	Escreval("O valor da matriz diferença é:")
+
+	Para i de 1 até 5 faça
+		Para j de 1 até 5 faça
+			Escreva(D[i, j], " ")
+		Fim_para
+		Escreval()
+	Fim_para
+			

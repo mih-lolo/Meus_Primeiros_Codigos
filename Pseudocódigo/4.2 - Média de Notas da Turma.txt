@@ -1,0 +1,47 @@
+Algoritmo Exe2
+
+Tipo
+	Avaliacao_aluno = registro
+	nome : Vetor[1..30] de caractere
+	notas : Vetor [1..4] de real
+	media : real
+
+Fim_registro
+
+Var
+	alunos : Vetor[1..20] de Avaliacao_aluno
+	i, j : inteiro
+	soma, mediat : real
+Início
+	mediat <- 0
+	para i de 1 até 20 faça
+		soma <- 0
+		Escreval("Informe o nome do aluno ", i, ": ")
+		Leia(alunos[i].nome)
+
+		para j de 1 até 4 faça
+			Escreval("Digite a nota ", i, ": ")
+			Leia(alunos[i].notas[j])
+			soma <- soma + alunos[i].notas[j]
+		Fim_para
+		
+		alunos[i].media <- soma / 4
+		mediat <- mediat + soma
+	Fim_para
+
+	mediat <- mediat / 20
+
+	para i de 1 até 20 faça
+
+		Escreval("Nome: ", alunos[i].nome)
+		
+		para j de 1 até 4 faça
+			Escreval("Nota ", j, ": ", alunos[i].notas[j]
+		Fim_para
+
+		Escreval("Média: ", alunos[i].media)
+		Escreval("--------------------------")
+	Fim_para
+
+	Escreval("A media geral da turma foi: ", mediat)
+Fim

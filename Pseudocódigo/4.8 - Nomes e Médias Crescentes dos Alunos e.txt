@@ -1,0 +1,47 @@
+Algoritmo Exe08
+Var
+	nome : Vetor[1..5, 1..30] de caractere
+	aux :  Vetor[1..30] de caractere
+	notas : Vetor [1..5, 1..4] de real
+	media : Vetor [1..5] de real
+	primeiro : logico
+	i, j : inteiro
+Início
+
+	Para i de 1 até 5 faça
+		Escreval("Informe o nome do aluno ", i, ":")
+		Leia(nome[i])
+		media[i] <- 0
+
+		Para j de 1 até 4 faça
+			Escreval("Digite o valor da nota ", j, ":")
+			Leia(notas[i, j]
+			media[i] <- media[i] + nota[i, j]
+		Fim_para
+
+		media[i] <- media[i] / 4
+	Fim_para
+
+	Para i de 1 até 5 faça
+		Para j de i+1 até 5 faça
+			Se(media[i] > media[j]) faça
+				nome[i] <- aux
+				nome[i] <- media[j]
+				nome[j] <- aux
+			Fim_se
+		Fim_para
+	Fim_para
+
+	Escreval("Os nomes classificados em ordem crescente são:")
+
+	Para i de 1 até 5 faça
+
+		Escreval(nomes[i])
+
+	Fim_para
+
+Fim
+
+
+		
+

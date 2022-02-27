@@ -1,0 +1,24 @@
+Algoritmo Exe05
+Var
+	A, B, C : Vetor[1..20] de inteiro
+	i : inteiro
+Início
+	Para i de 1 até 20 faça
+		Escreval("Digite o valor ", i, " do vetor A:")
+		Leia(A[i])
+	Fim_para
+
+	Para i de 1 até 20 faça
+		Escreval("Digite o valor ", i, " do vetor B:")
+		Leia(B[i])
+		
+		C[i] <- A[i] + B[i]
+	Fim_para
+
+	Escreva("Os valores contidos no vetor C são: ")
+
+	Para i de 1 até 20 faça
+		Escreva(C[i], " ")
+	Fim_para
+
+Fim

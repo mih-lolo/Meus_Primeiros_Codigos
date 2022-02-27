@@ -1,0 +1,55 @@
+Algoritmo Exe5
+Var 
+	nome, nmaior : vetor[1..30] de caractere
+	pqntd, vqntd, eqntd, finalizar: inteiro
+	primeiro : logico
+
+Início 
+
+	primeiro <- verdadeiro
+	total <- 0
+
+	Repita
+
+		Escreval("Digite o nome do produto:")
+		Leia(nome)
+
+		Escreval("Digite a quantidade produzida do produto:")
+		Leia(pqntd)
+
+		Escreval("Digite a quantidade vendida do produto:")
+		Leia(vqntd)
+
+		eqntd <- pqntd - vqntd
+
+		Se(primeiro = verdadeiro) então
+			maior <- eqntd
+			primeiro <- falso
+		Fim_se
+
+		Se(eqntd > maior) então
+			maior <- eqntd
+			nmaior <- nome
+		Fim_se
+
+		Se(eqntd < 30)
+			Escreva(nome, " - ", eqntd, " unidades em estoque")
+		Fim_se
+
+		total <- total + eqntd
+
+		Escreva("Digite 0 para finalizar, ou 1 para consultar outro produto")
+		Leia(finalizar)
+
+		Até_que (finalizar = 0)
+
+	Escreva("A empresa possui, no total, ", total, " produtos em estoque")
+	Escreva("O produto com maior estoque é: ", nmaior)
+
+Fim
+
+
+
+
+
+		

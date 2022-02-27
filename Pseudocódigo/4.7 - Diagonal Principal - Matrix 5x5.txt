@@ -1,0 +1,19 @@
+Algoritmo Exe07
+Var
+	matriz : Vetor[1..5, 1..5] de inteiro
+	i, j : inteiro
+Início
+	Para i de 1 até 5 faça
+		Para j de 1 até 5 faça
+			Escreval("Digite o valor da posição [", i, "x", j, "]:")
+			Leia(matriz[i, j]
+		Fim_para
+	Fim_para
+
+	Escreva("Os elementos da diagonal principal são: ")
+
+	Para i de 1 até 5 faça
+		Escreva(matriz[i, i], " ")
+	Fim_para
+
+Fim

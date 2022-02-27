@@ -1,0 +1,25 @@
+Algoritmo PesoIdeal
+
+var
+	altura, peso: real
+	sexo: vetor[1..15] de caractere
+
+Início
+
+	Escreval("Digite a sua altura:")
+	Leia(altura)
+
+	Escreval("Digite o seu sexo: (escreva tudo com letra minúscula)")
+	Leia(sexo)
+
+	Se (sexo = "masculino") então
+		peso <- (72.2 * altura) - 58
+		Escreva("O seu peso ideal é: ", peso)
+
+	Senão
+		peso <- (62.1 * altura) - 44.7
+		Escreva("O seu peso ideal é: ", peso, "kg")
+
+	Fim_se
+
+Fim

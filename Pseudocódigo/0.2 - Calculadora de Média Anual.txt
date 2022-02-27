@@ -1,0 +1,29 @@
+Algoritmo Atividade3
+Var
+	notas : Vetor[1..5] de real
+	soma, media : real
+	i : inteiro
+Início
+
+	soma <- 0
+
+	Para i de 1 até 5 passo 1 faça
+		Escreval("Digite a nota ", i, " do aluno:")
+		Leia(notas[i])
+		soma <- soma + notas[i]
+	Fim_para
+		
+	media <- soma / 5
+	Escreva("A média anual do aluno é ", media) 
+
+	Se media < 5 então
+		Escreva("Status: REPROVADO")
+	Senão
+		Se media < 7 então
+			Escreva("Status: EM RECUPERAÇÃO")
+		Senão
+			Escreva("Status: APROVADO")
+		Fim_se
+	Fim_se
+Fim
+

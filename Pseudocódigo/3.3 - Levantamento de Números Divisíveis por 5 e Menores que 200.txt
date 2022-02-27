@@ -1,0 +1,16 @@
+Algoritmo Exe3
+Var
+	num : inteiro
+Início
+	
+	Para num de 0 até 199 passo 1 faça
+
+		Se((num MOD 5) = 0) então
+
+			Escreva(num)
+
+		Fim_se
+
+	Fim_para
+
+Fim

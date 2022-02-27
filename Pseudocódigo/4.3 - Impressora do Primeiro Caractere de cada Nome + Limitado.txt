@@ -1,0 +1,11 @@
+Algoritmo Exe03
+
+Var
+	nome : Vetor[1..64] de caractere
+Início
+	Repita
+		Escreva("Digite o nome, digite FIM para sair:")
+		Leia(nome)
+		Escreva(nome[1])
+	Até_que (nome = "Fim")
+Fim

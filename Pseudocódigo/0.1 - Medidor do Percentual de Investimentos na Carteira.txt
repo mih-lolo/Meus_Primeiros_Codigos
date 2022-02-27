@@ -1,0 +1,103 @@
+Algoritmo MapaAlg01
+
+	Procedimento Perc_invest_Pretendidos(*perc : real, n : inteiro)
+	Var
+		i : inteiro
+	Início 
+		Escreval("Percentuais pretendidos para cada tipo de investimento:")
+		
+		Para i de 1 até n passo 1 faça
+			Escreval(i, " - ", perc[i], "%")
+		Fim_para
+	Fim_procedimento
+
+
+	Procedimento Valores_Ja_Investidos(*perc_invest : real, n : inteiro)
+	Var
+		i : inteiro
+	Início
+		Escreval("Percentual dos valores já investidos em cada categoria:")
+
+		Para i de 1 até n passo 1 faça
+			Escreval(i, " - ", perc_invest[i], "%")
+		Fim_para
+	Fim_procedimento
+
+
+Var
+	valor, percentual, percentual_invest, difer : Vetor[1..5] de real
+	soma, maior : real
+	i, num : inteiro
+	primeiro : logico
+
+Início
+	Escreval("Opções de investimento:")
+	Escreval("1 - CDBs")
+	Escreval("2 - Ações")
+	Escreval("3 - Fundos Imobiliários")
+	Escreval("4 - Stocks")
+	Escreval("5 - Reits")
+
+	Repita
+		soma <- 0
+
+		Para i de 1 até 5 passo 1 faça
+			Escreva("Digite o percentual de investimento pretendido para a categoria ", i, ":")
+			Escreval("(digite um valor entre 0 e 100, caso não tenha interesse em investir em determinada categoria, apenas digite 0)")
+			Leia(percentual[i])
+			soma <- soma + percentual[i]
+		Fim_para
+	
+		Se (soma <> 100) então
+			Escreva("A soma dos percentuais digitados não alcança o total de 100%. ")
+			Escreva("Por favor, digite os percentuais pretendidos para cada categoria novamente.")
+		Fim_se
+	Até_que (soma = 100)
+
+	soma <- 0
+
+	Para i de 1 até 5 passo 1 faça
+		Escreval("Digite o valor investido na categoria ", i, ":")
+		Leia(valor[i])
+		soma <- soma + valor[i]
+	Fim_para
+
+	Para i de 1 até 5 passo 1 faça
+		percentual_invest[i] <- (valor[i] * 100) / soma
+	Fim_para
+
+	Perc_invest_Pretendidos(percentual, 5)
+	Valores_Ja_Investidos(percentual_invest, 5)
+	primeiro <- verdadeiro
+
+	Para i de 1 até 5 passo 1 faça
+		difer[i] <- percentual[i] - percentual_invest[i]
+		Se(primeiro = verdadeiro) então
+			maior <- difer[i]
+			num <- i
+			primeiro <- falso
+		Fim_se
+		Se(difer[i] < 0) então
+			difer[i] <- difer[i] * (-1)
+		Fim_se
+		Se(difer[i] > maior) então
+			maior <- difer[i]
+			num <- i
+		Fim_se
+	Fim_para
+
+	Caso (num)
+		Seja 1 faça Escreva("A categoria mais desbalanceada é: CDBs") 
+		Seja 2 faça Escreva("A categoria mais desbalanceada é: Ações")
+		Seja 3 faça Escreva("A categoria mais desbalanceada é: Fundos Imobiliários")
+		Seja 4 faça Escreva("A categoria mais desbalanceada é: Stocks")
+		Seja 5 faça Escreva("A categoria mais desbalanceada é: Reits")
+	Fim_caso
+Fim
+
+	
+
+	
+
+
+		 

@@ -1,0 +1,20 @@
+Algoritmo Exercicio2
+
+var
+	num: inteiro
+
+Início
+
+	Escreva("Digite um número inteiro: ")
+	Leia(num)
+
+	Se (((num MOD 3) = 0) E ((num MOD 7) = 0))) então
+		Escreva("Número divisível por 3 e por 7")
+
+	Senão
+		Escreva("O número não é divisível por 3 e por 7 simultaneamente")
+
+	Fim_se
+
+Fim
+		

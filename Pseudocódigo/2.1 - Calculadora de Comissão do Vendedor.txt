@@ -1,0 +1,40 @@
+Algoritmo Exercicio1
+
+var
+	nome, matricula: vetor[1..20] de caractere
+	salario_fixo, vendas, comissao, salario_total: real
+
+Início 
+
+	Escreval("Digite o nome do vendedor:")
+	Leia(nome)
+
+	Escreval("Digite o seu numero de matricula:")
+	Leia(matricula)
+
+	Escreval("Digite o seu salario fixo:")
+	Leia(salario_fixo)
+
+	Escreval("Digite o total que vendas que realizou:")
+	Leia(vendas)
+
+	Se (vendas < 1500) então
+		comissao <- vendas * (2 / 100)
+		salario_total <- comissao + salario_fixo
+		Escreval("O nome do vendedor é: ", nome)
+		Escreval("O seu número de matrícula é: ", matricula)
+		Escreval("O seu salário fixo é: ", salario_fixo, " reais")
+		Escreval("O seu salário total é: ", salario_total, " reais")
+
+	Senão 
+		comissao <- vendas * (4 / 100)
+		salario_total <- salario_fixo + comissao
+		Escreval("O nome do vendedor é: ", nome)
+		Escreval("O seu número de matrícula é: ", matricula)
+		Escreval("O seu salário fixo é: ", salario_fixo)
+		Escreval("O seu salário total é: ", salario_total)
+
+	Fim_se
+
+Fim
+

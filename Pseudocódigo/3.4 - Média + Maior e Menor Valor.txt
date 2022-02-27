@@ -1,0 +1,49 @@
+Algoritmo Exe4
+Var 
+	cont, num, maior, menor : inteiro
+	media : real
+	primeiro : logico
+
+Início
+	
+	primeiro <- verdadeiro
+	media <- 0
+	cont <- 0
+
+	Escreval("Informe o valor:")
+	Leia(num)
+
+	Enquanto(num >= 0) faça
+
+		Se(primeiro = verdadeiro) então
+			maior <- num
+			menor <- num
+			primeiro <- falso
+		Fim_se
+		
+		Se(num > maior) então
+			maior <- num
+		Fim_se
+
+		Se(num < menor)
+			menor <- num
+		Fim_se
+
+		cont <- cont + 1
+		media <- media + num
+
+		Escreval("Informe o valor:")
+		Leia(num)
+
+	Fim_enquanto
+
+	media <- media / cont
+
+	Escreval("A media dos numeros e: ", media)
+	Escreval("O maior valor e: ", maior)
+	Escreval("E o menor valor e: ", menor)
+
+Fim
+
+
+	 
